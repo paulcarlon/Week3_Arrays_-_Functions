@@ -109,21 +109,21 @@ isHotOutside = false;
 moneyInPocket = 20;
 console.log(`willBuyDrink() : ${willBuyDrink()}`);
 //Create a function of your own that solves a problem. In comments, write what the function does and why you created it.
-let bodyTemp;
-let isNautious;
-function areYouSick(bodyTemp, isNautious) {
+let bodyTemp = 98.5;
+let isNautious = false;
+function areYouSick() {
   if (bodyTemp < 98.5 && !isNautious) {
     return false;
   } else if (bodyTemp >= 98.5 || isNautious) {
     return true;
   }
 }
-console.log(`areYouSick(98.5, false) : ${areYouSick(98.5, false)}`);
+console.log(`areYouSick() : ${areYouSick()}`);
 
 /*
   I was just thinking about the times we're living in!
 
-  My function is called: areYouSick, and it takes in 2 arguments, bodyTemp or body temperature and isNautious, because it sounded better than isPuking.
+  My function is called: areYouSick(), and before-hand a bodyTemp or body temperature value is assigned, I used 98.5, also isNautious is set to true or false, I set it to false.
 
-  I have an if/else statement inside, where I use a boolean operator to determine if the number/body temperature passed as the first argument is less than ~or~ equal to/greater than 98.5 and/or if the second argument is true or false, isNautious ~or~ is not! If either bodyTemp is 98.5 or higher ~or~ isNautious, areYouSick(), will return true. If bodyTemp is 98.4 or lower ~and~ not!isNautious then areYouSick() will return false.   
+  I have an if/else statement inside, where I use a boolean operator to determine if the number/body temperature defined is less than ~or~ equal to/greater than 98.5 and/or if isNautious is true ~or~ is not! If either bodyTemp is 98.5 or higher ~or~ isNautious, areYouSick(), will return true. If bodyTemp is 98.4 or lower ~and~ not!isNautious then areYouSick() will return false.   
 */
