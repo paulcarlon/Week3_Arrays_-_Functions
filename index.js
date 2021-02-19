@@ -7,7 +7,7 @@ of the array (do not use numbers to reference the last element, find it programm
 is not allowed). Print the result to the console.*/
 
 const firstEl = ages[0];
-const lastEl = ages[ages.length - 1];
+let lastEl = ages[ages.length - 1];
 const firstElMinusLastEl = lastEl - firstEl;
 console.log(
   `Subtracting the first age, ${firstEl}, from the last one, ${lastEl}, results in the number ${firstElMinusLastEl}.`
@@ -16,10 +16,10 @@ console.log(
 // Add a new age to your array and repeat the step above to ensure it is dynamic (works for arrays of different lengths).
 
 ages.push(31);
-newLastEl = ages[ages.length - 1];
-const firstElMinusNewLastEl = newLastEl - firstEl;
+lastEl = ages[ages.length - 1];
+const firstElMinusNewLastEl = lastEl - firstEl;
 console.log(
-  `After adding my age to the end of our array and subtracting our first age, ${firstEl}, from this new last age, ${newLastEl}, the resulting number is ${firstElMinusNewLastEl}.`
+  `After adding my age to the end of our array and subtracting our first age, ${firstEl}, from this new last age, ${lastEl}, the resulting number is ${firstElMinusNewLastEl}.`
 );
 
 //Use a loop to iterate through the array and calculate the average age. Print the result to the console.
@@ -200,3 +200,46 @@ console.log(`areYouSick(98.5, false) : ${areYouSick(98.5, false)}`);
 
   I have an if/else statement inside, where I use a boolean operator to determine if the number/body temperature defined is less than ~or~ equal to/greater than 98.5 and/or if isNautious is true ~or~ is not! If either bodyTemp is 98.5 or higher ~or~ isNautious, areYouSick(), will return true. If bodyTemp is 98.4 or lower ~and~ not!isNautious then areYouSick() will return false.   
 */
+let chicagoBulls = {
+  year: 1996,
+  pg: 'Michael Jordan',
+  sg: 'Ron Harper',
+  c: 'Luc Longley',
+  pf: 'Dennis Rodman',
+  sf: 'Scottie Pippen',
+};
+
+function whatsup() {
+  console.log('whatsup');
+}
+
+let { sf, pg, pf } = chicagoBulls; //destructure es 6 in the house
+let a = (year) => {
+  var a = `in ${year} my hair was like ${pf} but my hoops game was like ${pg}`;
+  console.log(a);
+};
+
+a(1996)
+  .then(() => {
+    console.log('whatsup');
+  })
+  .catch((err) => {
+    console.error('no bruddahs and sistas');
+  });
+
+// a(2000, 'short asf', 'gooooone');
+// a(2020, 'princess fill in the blank', 'still gone');
+// a(2021, 'hey! i wash it sometimes', 'in my ears');
+//CALLBACK
+// js is single threaded 1 line at a time
+
+// let username = sentHTTPRequest('getUser');
+// console.log(username);
+
+//Call back is when we pass a function into another function to be executed after that code is complete so that it doesnt cause a delay
+
+// function logUsername(user) {
+//   console.log(user);
+// }
+
+// sendHttpRequest('getUser', logUsername);
